@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artikelverwaltung</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script src="rest-service.js"></script>
+<h1>Artikelverwaltung</h1>
+
+<!-- CREATE -->
+<h2>Artikel erstellen</h2>
+<input type="number" id="createId" placeholder="Artikel-ID">
+<input type="text" id="bezeichnung" placeholder="Bezeichnung">
+<input type="text" id="beschreibung" placeholder="Beschreibung">
+<input type="number" id="preisEK" placeholder="Einkaufspreis">
+<input type="number" id="preisVK" placeholder="Verkaufspreis">
+<button onclick="createArticle()">Erstellen</button>
+
+<!-- READ -->
+<h2>Artikel abrufen</h2>
+<input type="number" id="articleId" placeholder="Artikel-ID (optional)">
+<button onclick="getArticle()">Einen Artikel abrufen</button>
+<button onclick="getAllArticles()">Alle Artikel abrufen</button>
+
+<!-- UPDATE -->
+<h2>Artikel aktualisieren</h2>
+<input type="number" id="updateId" placeholder="Artikel-ID">
+<input type="text" id="updateBezeichnung" placeholder="Neue Bezeichnung">
+<input type="text" id="updateBeschreibung" placeholder="Neue Beschreibung">
+<input type="number" id="updatePreisEK" placeholder="Neuer Einkaufspreis">
+<input type="number" id="updatePreisVK" placeholder="Neuer Verkaufspreis">
+<button onclick="updateArticle()">Aktualisieren</button>
+
+<!-- DELETE -->
+<h2>Artikel löschen</h2>
+<input type="number" id="deleteId" placeholder="Artikel-ID">
+<button onclick="deleteArticle()">Löschen</button>
+
+<h2>Antwort:</h2>
+<pre id="response"></pre>
+
+</body>
+</html>

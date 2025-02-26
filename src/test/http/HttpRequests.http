@@ -1,0 +1,31 @@
+### Auslese einzel
+GET http://localhost:8080/myappdata/articles/1
+Accept: application/json
+### Hinzufügen
+POST  http://localhost:8080/myappdata/articles
+Content-Type: application/json
+
+{
+"id": 5,
+"bezeichnung": "Testobjekt",
+"beschreibung": "Nicht Nötig",
+"preisEK": 9.99,
+"preisVK": 12.99
+}
+
+### Updaten
+PUT http://localhost:8080/myappdata/articles
+Content-Type: application/json
+
+{
+  "id": 5,
+  "bezeichnung": "Testobjekt",
+  "beschreibung": "Nicht wirklich benötigt",
+  "preisEK": 10.99,
+  "preisVK": 15.99
+}
+
+### Löschen
+DELETE http://localhost:8080/myappdata/articles/5
+Accept: application/json
+
