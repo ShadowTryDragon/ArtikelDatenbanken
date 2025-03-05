@@ -1,0 +1,31 @@
+package exeptions;
+
+
+import java.util.Date;
+
+public class ExeptionDetails {
+    private Date timeStemp;
+    private String message;
+    private String details;
+
+
+    public ExeptionDetails(Date timeStemp, String message, String details) {
+        this.timeStemp = timeStemp;
+        this.message = message;
+        this.details = details;
+    }
+
+    public Date getTimeStemp() {
+        return timeStemp;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public String getDetails() {
+        return details;
+    }
+
+
+}
